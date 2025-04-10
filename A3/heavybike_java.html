@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honda Bikes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans bg-gray-100 text-gray-800">
+    <header class="bg-red-600 text-white py-5 text-center">
+        <h1 class="text-3xl font-bold mb-2">Honda Bike Models</h1>
+        <nav>
+            <ul class="flex justify-center space-x-6">
+                <li><a href="home_java.html" class="hover:text-yellow-400">Home</a></li>
+                <li><a href="bikes_java.html" class="hover:text-yellow-400">Bikes</a></li>
+                <li><a href="heavybike_java.html" class="hover:text-yellow-400">Heavy Bikes</a></li>
+                <li><a href="contact_java.html" class="hover:text-yellow-400">Contact</a></li>
+                <li><a href="about_java.html" class="hover:text-yellow-400">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="models grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 p-6">
+        <div class="motor bg-white border rounded-lg shadow-lg overflow-hidden">
+            <img src="d:\Pakistan Honda\A1\honda gold wing.jpeg" alt="A1" class="w-full h-48 object-cover">
+            <div class="p-4 text-center">
+                <h2 class="text-xl font-semibold text-red-600">Honda Gold Wing</h2>
+                <p class="text-lg text-gray-600">Price: PKR 2,000,000</p>
+            </div>
+        </div>
+        <div class="motor bg-white border rounded-lg shadow-lg overflow-hidden">
+            <img src="d:\Pakistan Honda\A1\honda africa twin.jpeg" alt="A1" class="w-full h-48 object-cover">
+            <div class="p-4 text-center">
+                <h2 class="text-xl font-semibold text-red-600">Honda Africa Twin</h2>
+                <p class="text-lg text-gray-600">Price: PKR 1,200,000</p>
+            </div>
+        </div>
+        <div class="motor bg-white border rounded-lg shadow-lg overflow-hidden">
+            <img src="d:\Pakistan Honda\A1\honda CRF 1000L.jpeg" alt="A1" class="w-full h-48 object-cover">
+            <div class="p-4 text-center">
+                <h2 class="text-xl font-semibold text-red-600">Honda CRF 1000L</h2>
+                <p class="text-lg text-gray-600">Price: PKR 1,800,000</p>
+            </div>
+        </div>
+        <div class="motor bg-white border rounded-lg shadow-lg overflow-hidden">
+            <img src="d:\Pakistan Honda\A1\honda rebel.jpeg" alt="A1" class="w-full h-48 object-cover">
+            <div class="p-4 text-center">
+                <h2 class="text-xl font-semibold text-red-600">Honda Rebel</h2>
+                <p class="text-lg text-gray-600">Price: PKR 3,500,000</p>
+            </div>
+        </div>
+        <div class="motor bg-white border rounded-lg shadow-lg overflow-hidden">
+            <img src="d:\Pakistan Honda\A1\honda CMX 500.jpeg" alt="A1" class="w-full h-48 object-cover">
+            <div class="p-4 text-center">
+                <h2 class="text-xl font-semibold text-red-600">Honda CMX 500</h2>
+                <p class="text-lg text-gray-600">Price: PKR 2,500,000</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-red-600 text-white py-4 text-center mt-8">
+        <p>&copy; 2025 Honda Bikes Pakistan</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll(".motor p").forEach(p => {
+                p.addEventListener("mouseover", () => {
+                    let num = parseInt(p.textContent.replace(/[^\d]/g, ''));
+                    p.textContent = `Price: PKR ${num.toLocaleString()}`;
+                });
+            });
+        });
+        window.onbeforeunload = () => "Are you sure you want to leave?";
+    </script>
+    
+</body>
+</html>
